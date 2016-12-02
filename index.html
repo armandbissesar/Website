@@ -1,109 +1,137 @@
 <!DOCTYPE html>
 <html lang="nl">
+
 <head>
     <meta charset="UTF-8">
-    <title>Overzichtpagina</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="styles/styles.css">
+
+    <title>NS 99 Verhalen</title>
+
+
 </head>
+
+
 <body>
-   <header>
-   <!-- Menu van de website -->
-    <nav>
-       <ul>
-           <li><img src="#" alt="#"></li>
-           <li><img src="#" alt="#"></li>
-           <li><input type="text" name="search" placeholder="Zoeken..."></li>
-       </ul>
-    </nav>
-        
-   </header>
-   <!-- Einde van de header -->
-   
-   <!-- Filter opties -->
-   
-<!-- Schrijvers -->
- <form>
-   <select name="filteren" id="#">
-     <option value="" disabled selected>Schrijvers</option>
-          <option value="hugo-leijten">Hugo Leijten</option>
-          <option value="kippfest">Kippfest</option>
-          <option value="molovich">Molovich</option>
-          <option value="oud-zeikwijf">Oud Zeikwijf</option>
-    </select>
- </form>   
- 
- <!-- Genre -->    
- <form>
-    <select name="filteren" id="#">
-     <option value="" disabled selected>Genre</option>
-          <option value="humor">Humor</option>
-          <option value="informatief">Informatief</option>
-          <option value="kunst">Kunst</option>
-          <option value="roman">Roman</option>
-          <option value="thriller">thriller</option>
-    </select> 
-</form> 
 
-<!-- Lees niveau -->
- Leesniveau
- <input type="range" min="0" max="100" />
+    <!-- Header van de website -->
+    <header class="main-header">
+        <!-- Een img van de logo -->
+        <a href="index.html"><img src="img/ns-logo.png" alt="nslogo"></a>
+
+        <!-- De Navigatie -->
+        <nav>
+          <ul>
+              <li><input type="text" name="search" placeholder="Zoeken..."></li>
+              <li><a href="/login.html">Login</a></li>
+          </ul>
+       </nav>
+    </header>
+
+    <!-- barbar met de filter en sorteer opties -->
+    <section class="filters">
+        <!--filteren-->
+        <form>
+                <select name="filteren">
+                <option value="" disabled selected>Leesduur</option>
+                <option value="0 - 5  min">0 - 5 min</option>
+                <option value="5 - 10 min">5 - 10 min</option>
+                <option value="10+ min">10+ min</option>
 
 
-<!-- Lees duur -->
-<form> 
-    <select name="filteren" id=""> 
-     <option value="" disabled selected>Leesduur</option>
-          <option value="humor">0 - 5 min</option>
-          <option value="informatief">5 - 10 min</option>
-          <option value="kunst">10 - 15 min</option>
-          <option value="roman">15 - 20 min</option>   
-    </select>   
-  </form>
+                </select>
+        
 
- 
-<!-- Nieuwe artikelen -->
-<h1>Nieuwe Artikelen</h1>
-   <article>
-            <h2>TITEL</h2>
-            <img src="img/..." alt="artikel image" />
-            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
-            <button>Lees meer </button>
-        </article>
+
         
-        <article> 
-                    <h2>TITEL</h2>
-            <img src="img/..." alt="artikel image" />
-            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
-            <button>Lees meer </button>
-        </article>
+            <select name="filteren">
+                <option value="" disabled selected>Genre</option>
+                <option value="Alle">Alle</option>
+                <option value="<Avontuur></Avontuur>">Avontuur</option>
+                <option value="Drama">Drama</option>
+                <option value="Horror">Horror</option>
+                <option value="Liefde">Liefde</option>
+
+            </select>
         
-        <article>
-                    <h2>TITEL</h2>
-            <img src="img/..." alt="artikel image" />
-            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
-            <button>Lees meer </button>
-        </article>
+
+        <!--Sorteren-->
+
         
-<!-- Populaire artikelen -->
-  <h1>Populaire Artikelen</h1>
-   <article>
-            <h2>TITEL</h2>
-            <img src="img/..." alt="artikel image" />
-            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
-            <button>Lees meer </button>
-        </article>
         
-        <article>
-                    <h2>TITEL</h2>
-            <img src="img/..." alt="artikel image" />
-            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
-            <button>Lees meer ></button>
-        </article>
-        
-        <article>
-                    <h2>TITEL</h2>
-            <img src="img/..." alt="artikel image" />
-            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
-            <button>Lees meer ></button>
-        </article>  
+            <select name="sorteren">
+            
+                <option value="disabled selected">Sorteren</option>
+            
+                <option value="meest-gelezen">Aanbevolen</option>
+            
+                <option value="meest-opgeslagen">Populair</option>
+                <option value="nieuw">Nieuw</option>
+            </select>
+        </form>
+
+    </section>
+
+
+
+    <!-- Einde van de barbar -->
+
+    <!-- Main content van de website -->
+
+        <h1>Aanbevolen voor jou</h1>
+
+        <!--artikel 1-->
+        <section class="aanbevolen">
+            <article>
+                <h2>Pokemon</h2>
+                <figure> 
+                <img src="img/pikachu.jpg" alt="Afbeelding van Pikachu" />
+                </figure>
+                <p>
+                    ‘Zijn die nu allemaal op hunne pôkemoeng aant zieng?’ Hij sprak in kloek Antwerps van ‘pokemoeng’. Hij was de zestig al ruim gepasseerd en zag er ondanks zijn opmerking niet meteen uit als een…
+                </p>
+                <section class=blokje>
+                    <button>Lees verder </button>
+                    <p>Leesduur 4 min </p>
+                </section>
+            </article>
+
+
+            <!--artikel 2-->
+            <article>
+                <h2>De Man met een Piemel Als Neus</h2>
+                <figure> 
+                <img src="img/piemel.png" alt="Afbeelding " />
+                </figure>
+                <p>En dat was dat. Ineens had Keesfan begrepen waarom mannen broeken droegen. Want een piemel op ooghoogte, bloot, een erectie of geen erectie- alles werd afgemeten aan de status van dat ding. Hierna kwam ze…
+                </p>
+                <section class=blokje>
+                    <button>Lees verder </button>
+                    <p>Leesduur 3 min </p>
+                </section>
+            </article>
+
+
+
+            <!--artikel 3-->
+            <article>
+                <h2>Martin Bril</h2>
+                <figure>
+                <img src="img/centraalstation.jpg" alt="afbeelding van centraal station" />
+                </figure>
+                <p>Centraal Station. Iedereen gaat er naartoe, niemand moet er zijn. Behalve om verder te reizen. Ik stap uit de bus, lijn 21. Van Geuzenveld naar Centraal Station. Toen plots...
+                </p>
+                <section class=blokje>
+                    <button>Lees verder </button>
+                    <p>Leesduur 2 min </p>
+                </section>
+            </article>
+
+
+            </section>
+
 </body>
+
 </html>
